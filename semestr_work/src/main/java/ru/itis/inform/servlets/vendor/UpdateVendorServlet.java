@@ -47,6 +47,11 @@ public class UpdateVendorServlet extends HttpServlet {
         User user = userService.getByUsername((String) req.getSession().getAttribute("session_username"));
         Vendor vendor = vendorService.getByUserId(user.getUserId());
 
+        String phone = req.getParameter("phone");
+
+        if (phone.equals(vendor.getPhoneNumber()))
+            phone = "";
+
         if (userService.verifyCustomerPhoneExistence(req.getParameter("phone")) || userService.verifyVendorPhoneExistence(req.getParameter("phone"))) {
             getServletConfig().getServletContext().getRequestDispatcher("/views/incorrectphone.jsp").forward(req, resp);
             return;
@@ -60,7 +65,6 @@ public class UpdateVendorServlet extends HttpServlet {
         if (!lastName.equals(""))
             user.setLastName(lastName);
 
-        String phone = req.getParameter("phone");
         if (!phone.equals(""))
             vendor.setPhoneNumber(phone);
 
