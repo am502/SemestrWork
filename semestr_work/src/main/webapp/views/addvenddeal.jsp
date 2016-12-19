@@ -54,7 +54,7 @@
             </div>
             <div class="form-group">
                 <label for="note">Примечание:</label>
-                <input type="text" id="note" name="note" pattern="[a-zA-Z]*" class="form-control" required>
+                <input type="text" id="note" name="note" pattern="[]|(([a-zA-Z]+ ?)*[a-zA-Z]+)" class="form-control" required>
             </div>
         </div>
         <br>
