@@ -9,14 +9,14 @@ CREATE TABLE users(
 CREATE TABLE vendors(
   vendor_id SERIAL PRIMARY KEY,
   user_id INT REFERENCES users(user_id) ON DELETE SET NULL,
-  phone_number VARCHAR(255),
+  phone_number VARCHAR(255) UNIQUE,
   status VARCHAR(255) DEFAULT 'ACTIVE'
 );
 
 CREATE TABLE customers(
   customer_id SERIAL PRIMARY KEY,
   user_id INT REFERENCES users(user_id) ON DELETE SET NULL,
-  phone_number VARCHAR(255),
+  phone_number VARCHAR(255) UNIQUE,
   status VARCHAR(255) DEFAULT 'ACTIVE'
 );
 

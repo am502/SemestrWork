@@ -40,7 +40,7 @@ public class RegServlet extends HttpServlet {
                 .lastName(lastName)
                 .build();
 
-        if (userService.verifyLoginExistence(login)) {
+        if (userService.verifyLoginExistence(login) || userService.verifyCustomerPhoneExistence(phone) || userService.verifyVendorPhoneExistence(phone)) {
             getServletConfig().getServletContext().getRequestDispatcher("/views/incorrectlogin.jsp").forward(req, resp);
             return;
         }
@@ -51,6 +51,7 @@ public class RegServlet extends HttpServlet {
         else {
             userService.insertVendor(user, phone);
         }
-        resp.sendRedirect("/login");
+        req.getSession().setAttribute("session_username", login);
+        resp.sendRedirect("/profile");
     }
 }

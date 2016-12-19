@@ -47,6 +47,11 @@ public class UpdateCustomerServlet extends HttpServlet {
         User user = userService.getByUsername((String) req.getSession().getAttribute("session_username"));
         Customer customer = customerService.getByUserId(user.getUserId());
 
+        if (userService.verifyCustomerPhoneExistence(req.getParameter("phone")) || userService.verifyVendorPhoneExistence(req.getParameter("phone"))) {
+            getServletConfig().getServletContext().getRequestDispatcher("/views/incorrectphone.jsp").forward(req, resp);
+            return;
+        }
+
         String firstname = req.getParameter("firstName");
         if (!firstname.equals(""))
             user.setFirstName(firstname);

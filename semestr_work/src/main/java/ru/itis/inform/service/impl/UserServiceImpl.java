@@ -58,4 +58,14 @@ public class UserServiceImpl implements UserService {
     public boolean verifyLoginExistence(String login) {
         return userDao.verifyLoginExistence(login);
     }
+
+    @Override
+    public boolean verifyCustomerPhoneExistence(String phone) {
+        return userDao.verifyCustomerPhoneExistence(phone);
+    }
+
+    @Override
+    public boolean verifyVendorPhoneExistence(String phone) {
+        return userDao.verifyVendorPhoneExistence(phone);
+    }
 }

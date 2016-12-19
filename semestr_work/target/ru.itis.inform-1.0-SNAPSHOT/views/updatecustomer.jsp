@@ -29,16 +29,16 @@
     </div>
 </nav>
 <div class="container">
-    <h2>Enter new values</h2>
+    <h2>Введите новые значения</h2>
     <form action="updatecustomer" method="post">
         <div class="input-group input-group-lg">
             <div class="form-group">
                 <label for="lastName">Фамилия:</label>
-                <input type="text" id="lastName" name="lastName" class="form-control">
+                <input type="text" pattern="[a-zA-Z]*" id="lastName" name="lastName" class="form-control">
             </div>
             <div class="form-group">
                 <label for="firstName">Имя:</label>
-                <input type="text" id="firstName" name="firstName" class="form-control">
+                <input type="text" pattern="[a-zA-Z]*" id="firstName" name="firstName" class="form-control">
             </div>
             <div class="form-group">
                 <label for="phone">Телефон:</label>
@@ -46,7 +46,7 @@
             </div>
         </div>
         <br>
-        <input type="submit" class="btn btn-primary">
+        <input type="submit" value="Изменить" class="btn btn-primary">
     </form>
 </div>
 </body>

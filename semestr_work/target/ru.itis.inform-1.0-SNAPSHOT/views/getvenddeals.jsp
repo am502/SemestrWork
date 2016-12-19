@@ -31,13 +31,13 @@
 </nav>
 <div class="container">
     <h3>
-        №: ${vendorDeal.vendorDealId}<br>
-        Способ оплаты: ${vendorDeal.paymentMethod}<br>
-        Товар: ${vendorDeal.goodName}<br>
-        Цена:${vendorDeal.price}<br>
+        №:                               ${vendorDeal.vendorDealId}<br>
+        Способ оплаты:                    ${vendorDeal.paymentMethod}<br>
+        Товар:                            ${vendorDeal.goodName}<br>
+        Цена:                             ${vendorDeal.price}<br>
         Объем партии при оптовой продаже: ${vendorDeal.lotSizeWholesale}<br>
-        Условие продажи-отгрузки: ${vendorDeal.conditionsSale}<br>
-        Примечание: ${vendorDeal.note}<br>
+        Условие продажи-отгрузки:         ${vendorDeal.conditionsSale}<br>
+        Примечание:                       ${vendorDeal.note}<br>
     </h3>
     <form action="" method="post">
         <input type="submit" class="btn btn-primary" value="Удалить">

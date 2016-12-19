@@ -29,7 +29,7 @@
     </div>
 </nav>
 <div class="jumbotron">
-    <h1><p class="text-center">ERROR</p></h1>
+    <h1><p class="text-center">Ошибка</p></h1>
 </div>
 </body>
 </html>

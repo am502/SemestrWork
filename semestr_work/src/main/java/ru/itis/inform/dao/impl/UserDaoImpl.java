@@ -20,6 +20,10 @@ public class UserDaoImpl implements UserDao {
 
     private static final String SQL_VERIFY = "SELECT CASE WHEN EXISTS (SELECT user_id FROM users WHERE login = :login) THEN TRUE ELSE FALSE END;";
 
+    private static final String SQL_VERIFY_CUSTOMER_PHONE = "SELECT CASE WHEN EXISTS (SELECT user_id FROM user_customer WHERE phone_number = :phone) THEN TRUE ELSE FALSE END;";
+
+    private static final String SQL_VERIFY_VENDOR_PHONE = "SELECT CASE WHEN EXISTS (SELECT user_id FROM user_vendor WHERE phone_number = :phone) THEN TRUE ELSE FALSE END;";
+
     private static final String SQL_FIND_BY_ID = "SELECT * FROM users WHERE user_id = :userId;";
 
     private static final String SQL_FIND_ALL = "SELECT * FROM users;";
@@ -106,5 +110,19 @@ public class UserDaoImpl implements UserDao {
         Map<String, Object> params = new HashMap();
         params.put("login", login);
         return namedParameterJdbcTemplate.queryForObject(SQL_VERIFY, params, boolean.class);
+    }
+
+    @Override
+    public boolean verifyCustomerPhoneExistence(String phone) {
+        Map<String, Object> params = new HashMap();
+        params.put("phone", phone);
+        return namedParameterJdbcTemplate.queryForObject(SQL_VERIFY_CUSTOMER_PHONE, params, boolean.class);
+    }
+
+    @Override
+    public boolean verifyVendorPhoneExistence(String phone) {
+        Map<String, Object> params = new HashMap();
+        params.put("phone", phone);
+        return namedParameterJdbcTemplate.queryForObject(SQL_VERIFY_VENDOR_PHONE, params, boolean.class);
     }
 }

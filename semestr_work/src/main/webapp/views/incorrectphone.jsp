@@ -1,14 +1,18 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: artur
+  Date: 19.12.2016
+  Time: 15:25
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Customer deal</title>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>404</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet"
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -23,18 +27,7 @@
     </div>
 </nav>
 <div class="container">
-    <h3>
-        №:            ${customerDeal.customerDealId}<br>
-        Способ оплаты: ${customerDeal.paymentMethod}<br>
-        Товар:         ${customerDeal.goodName}<br>
-        Цена:          ${customerDeal.price}<br>
-        Объем покупки: ${customerDeal.lotSize}<br>
-        Примечание:    ${customerDeal.note}<br>
-    </h3>
-    <form action="" method="post">
-        <input type="submit" class="btn btn-primary" value="Удалить">
-    </form>
-    <input type="button" class="btn btn-primary" value="Изменить" onclick=location.href="/updatecustdeal/${customerDeal.customerDealId}">
+    <p class="text-center"><h1>Пользователь с таким телефоном уже существует</h1></p>
 </div>
 </body>
 </html>

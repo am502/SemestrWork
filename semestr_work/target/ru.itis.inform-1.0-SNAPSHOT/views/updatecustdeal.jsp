@@ -23,12 +23,12 @@
     </div>
 </nav>
 <div class="container">
-    <h2>Enter new values</h2>
+    <h2>Введите новые значения</h2>
     <form action="" method="post">
         <div class="input-group input-group-lg">
             <div class="form-group">
                 <label for="goodName">Товар:</label>
-                <input type="text" id="goodName" name="goodName" class="form-control">
+                <input type="text" pattern="[a-zA-Z]*" id="goodName" name="goodName" class="form-control">
             </div>
             <div class="form-group">
                 <label for="lotSize">Объем покупки:</label>
@@ -40,15 +40,15 @@
             </div>
             <div class="form-group">
                 <label for="paymentMethod">Способ оплаты:</label>
-                <input type="text" id="paymentMethod" name="paymentMethod" class="form-control">
+                <input type="text" pattern="[a-zA-Z]*" id="paymentMethod" name="paymentMethod" class="form-control">
             </div>
             <div class="form-group">
                 <label for="note">Примечание:</label>
-                <input type="text" id="note" name="note" class="form-control">
+                <input type="text" pattern="[a-zA-Z]*" id="note" name="note" class="form-control">
             </div>
         </div>
         <br>
-        <input type="submit" class="btn btn-primary">
+        <input type="submit" value="Изменить" class="btn btn-primary">
     </form>
 </div>
 </body>

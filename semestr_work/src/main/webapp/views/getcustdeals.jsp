@@ -24,12 +24,12 @@
 </nav>
 <div class="container">
     <h3>
-        №: ${customerDeal.customerDealId}<br>
+        №:            ${customerDeal.customerDealId}<br>
         Способ оплаты: ${customerDeal.paymentMethod}<br>
-        Товар: ${customerDeal.goodName}<br>
-        Цена: ${customerDeal.price}<br>
+        Товар:         ${customerDeal.goodName}<br>
+        Цена:          ${customerDeal.price}<br>
         Объем покупки: ${customerDeal.lotSize}<br>
-        Примечание: ${customerDeal.note}<br>
+        Примечание:    ${customerDeal.note}<br>
     </h3>
     <form action="" method="post">
         <input type="submit" class="btn btn-primary" value="Удалить">

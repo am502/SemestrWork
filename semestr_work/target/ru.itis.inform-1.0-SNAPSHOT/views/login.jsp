@@ -21,11 +21,11 @@
     <form class="form-inline" method="post">
         <div class="form-group">
             <label for="username">Username:</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+            <input type="text" class="form-control" id="username" name="username" placeholder="Введите никнейм">
         </div>
         <div class="form-group">
             <label for="pwd">Password:</label>
-            <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter password">
+            <input type="password" class="form-control" id="pwd" name="password" placeholder="Введите пароль">
         </div>
         <button type="submit" class="btn btn-default">Войти</button>
         <input type="button" class="btn btn-default" value="Регистрация" onclick=location.href="/registration">

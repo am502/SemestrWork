@@ -26,4 +26,8 @@ public interface UserService {
     void update(User user);
 
     boolean verifyLoginExistence(String login);
+
+    boolean verifyCustomerPhoneExistence(String phone);
+
+    boolean verifyVendorPhoneExistence(String phone);
 }

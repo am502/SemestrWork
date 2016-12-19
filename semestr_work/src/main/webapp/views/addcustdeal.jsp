@@ -29,12 +29,12 @@
     </div>
 </nav>
 <div class="container">
-    <h2>Fill all fields</h2>
+    <h2>Заполните все поля</h2>
     <form action="addcustdeal" method="post">
         <div class="input-group input-group-lg">
             <div class="form-group">
                 <label for="goodName">Товар:</label>
-                <input type="text" id="goodName" name="goodName" class="form-control" required>
+                <input type="text" id="goodName" pattern="[a-zA-Z]*" name="goodName" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="lotSize">Объем покупки:</label>
@@ -46,15 +46,15 @@
             </div>
             <div class="form-group">
                 <label for="paymentMethod">Способ оплаты:</label>
-                <input type="text" id="paymentMethod" name="paymentMethod" class="form-control" required>
+                <input type="text" pattern="[a-zA-Z]*" id="paymentMethod" name="paymentMethod" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="note">Примечание:</label>
-                <input type="text" id="note" name="note" class="form-control" required>
+                <input type="text" pattern="[a-zA-Z]*" id="note" name="note" class="form-control" required>
             </div>
         </div>
         <br>
-        <input type="submit" class="btn btn-primary">
+        <input type="submit" value="Добавить" class="btn btn-primary">
     </form>
 </div>
 </body>

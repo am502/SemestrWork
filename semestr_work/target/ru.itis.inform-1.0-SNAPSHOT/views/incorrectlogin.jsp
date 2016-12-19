@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="container">
-    <p class="text-center"><h1>This nickname is already exist</h1></p>
+    <p class="text-center"><h1>Пользователь с таким никнейном или телефоном уже существует</h1></p>
     <form>
         <input type="button" class="btn btn-primary" value="Вернуться"
                onclick=location.href="/registration">

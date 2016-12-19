@@ -17,24 +17,24 @@
 </head>
 <body>
 <div class="container">
-    <h2>Fill all fields</h2>
+    <h2>Заполните все поля</h2>
     <form action="" method="post">
         <div class="input-group input-group-lg">
             <div class="form-group">
                 <label for="username">Никнейм:</label>
-                <input type="text" id="username" name="username" class="form-control" required>
+                <input type="text" pattern="[0-9a-zA-Z]*" id="username" name="username" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="password">Пароль:</label>
-                <input type="password" id="password" name="password" class="form-control" required>
+                <input type="password" pattern="[0-9a-zA-Z]*" id="password" name="password" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="firstName">Имя:</label>
-                <input type="text" id="firstName" name="firstName" class="form-control" required>
+                <input type="text" pattern="[a-zA-Z]*" id="firstName" name="firstName" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="lastName">Фамилия:</label>
-                <input type="text" id="lastName" name="lastName" class="form-control" required>
+                <input type="text" pattern="[a-zA-Z]*" id="lastName" name="lastName" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="phoneNumber">Номер телефона:</label>

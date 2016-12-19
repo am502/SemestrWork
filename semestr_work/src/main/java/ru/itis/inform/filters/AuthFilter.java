@@ -28,8 +28,7 @@ public class AuthFilter implements Filter {
             HttpSession session = req.getSession(false);
 
             if (session == null || session.getAttribute("session_username") == null) {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/views/login.jsp");
-                dispatcher.forward(request, response);
+                resp.sendRedirect("/login");
             }
             else {
                 chain.doFilter(request, response);
