@@ -23,7 +23,7 @@
         <div class="input-group input-group-lg">
             <div class="form-group">
                 <label for="comment">Комментарий:</label>
-                <input type="text" pattern="[a-zA-Z]*" id="comment" name="comment" class="form-control" required>
+                <input type="text" pattern="[]|(([a-zA-Z]+ ?)*[a-zA-Z]+)" id="comment" name="comment" class="form-control" required>
             </div>
             <br>
             <input type="submit" value="Ок" class="btn btn-primary">

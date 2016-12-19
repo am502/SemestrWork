@@ -34,7 +34,7 @@
         <div class="input-group input-group-lg">
             <div class="form-group">
                 <label for="goodName">Товар:</label>
-                <input type="text" id="goodName" pattern="[a-zA-Z]*" name="goodName" class="form-control" required>
+                <input type="text" id="goodName" pattern="([a-zA-Z]+ ?)*[a-zA-Z]+" name="goodName" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="lotSize">Объем покупки:</label>

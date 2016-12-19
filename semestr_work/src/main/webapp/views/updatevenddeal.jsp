@@ -28,7 +28,7 @@
         <div class="input-group input-group-lg">
             <div class="form-group">
                 <label for="goodName">Товар:</label>
-                <input type="text" pattern="[a-zA-Z]*" id="goodName" name="goodName" class="form-control">
+                <input type="text"pattern="[]|(([a-zA-Z]+ ?)*[a-zA-Z]+)" id="goodName" name="goodName" class="form-control">
             </div>
             <div class="form-group">
                 <label for="lotSizeWholesale">Объем партии при оптовой продаже:</label>
@@ -40,15 +40,15 @@
             </div>
             <div class="form-group">
                 <label for="paymentMethod">Способ оплаты:</label>
-                <input type="text" pattern="[a-zA-Z]*" id="paymentMethod" name="paymentMethod" class="form-control">
+                <input type="text" pattern="[]|(([a-zA-Z]+ ?)*[a-zA-Z]+)" id="paymentMethod" name="paymentMethod" class="form-control">
             </div>
             <div class="form-group">
                 <label for="conditionsSale">Условие продажи-отгрузки:</label>
-                <input type="text" pattern="[a-zA-Z]*" id="conditionsSale" name="conditionsSale" class="form-control">
+                <input type="text" pattern="[]|(([a-zA-Z]+ ?)*[a-zA-Z]+)" id="conditionsSale" name="conditionsSale" class="form-control">
             </div>
             <div class="form-group">
                 <label for="note">Примечание:</label>
-                <input type="text" pattern="[a-zA-Z]*" id="note" name="note" class="form-control">
+                <input type="text" pattern="[]|(([a-zA-Z]+ ?)*[a-zA-Z]+)" id="note" name="note" class="form-control">
             </div>
         </div>
         <br>

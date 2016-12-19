@@ -28,7 +28,7 @@
         <div class="input-group input-group-lg">
             <div class="form-group">
                 <label for="goodName">Товар:</label>
-                <input type="text" pattern="[a-zA-Z]*" id="goodName" name="goodName" class="form-control">
+                <input type="text" pattern="[]|[a-zA-Z][\sa-zA-Z]*" id="goodName" name="goodName" class="form-control">
             </div>
             <div class="form-group">
                 <label for="lotSize">Объем покупки:</label>
