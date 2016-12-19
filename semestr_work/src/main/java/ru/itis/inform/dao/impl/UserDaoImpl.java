@@ -20,9 +20,9 @@ public class UserDaoImpl implements UserDao {
 
     private static final String SQL_VERIFY = "SELECT CASE WHEN EXISTS (SELECT user_id FROM users WHERE login = :login) THEN TRUE ELSE FALSE END;";
 
-    private static final String SQL_VERIFY_CUSTOMER_PHONE = "SELECT CASE WHEN EXISTS (SELECT user_id FROM user_customer WHERE phone_number = :phone) THEN TRUE ELSE FALSE END;";
+    private static final String SQL_VERIFY_CUSTOMER_PHONE = "SELECT CASE WHEN EXISTS (SELECT user_id FROM user_customer WHERE phone_number = :phone AND status = 'ACTIVE') THEN TRUE ELSE FALSE END;";
 
-    private static final String SQL_VERIFY_VENDOR_PHONE = "SELECT CASE WHEN EXISTS (SELECT user_id FROM user_vendor WHERE phone_number = :phone) THEN TRUE ELSE FALSE END;";
+    private static final String SQL_VERIFY_VENDOR_PHONE = "SELECT CASE WHEN EXISTS (SELECT user_id FROM user_vendor WHERE phone_number = :phone AND status = 'ACTIVE') THEN TRUE ELSE FALSE END;";
 
     private static final String SQL_FIND_BY_ID = "SELECT * FROM users WHERE user_id = :userId;";
 

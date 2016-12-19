@@ -52,7 +52,7 @@ public class UpdateVendorServlet extends HttpServlet {
         if (phone.equals(vendor.getPhoneNumber()))
             phone = "";
 
-        if (userService.verifyCustomerPhoneExistence(req.getParameter("phone")) || userService.verifyVendorPhoneExistence(req.getParameter("phone"))) {
+        if (userService.verifyCustomerPhoneExistence(phone) || userService.verifyVendorPhoneExistence(phone)) {
             getServletConfig().getServletContext().getRequestDispatcher("/views/incorrectphone.jsp").forward(req, resp);
             return;
         }
